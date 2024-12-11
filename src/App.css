@@ -1,0 +1,148 @@
+
+
+/* Styles de base de l'application */
+:root {
+    --primary-color: #004d40; /* Couleur principale : un vert foncé */
+    --secondary-color: #80cbc4; /* Couleur secondaire : un vert clair */
+    --accent-color: #ff9800; /* Couleur d'accentuation : orange */
+    --text-color: #333;
+    --background-color: #e0f2f1; /* Fond : vert pastel clair */
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.app {
+    text-align: center;
+}
+
+.header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+}
+
+.nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.nav ul li {
+    margin: 0 15px;
+}
+
+.nav ul li a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Main Section */
+.main {
+    padding: 0px; /* Pas de marge spécifique pour la section principale */
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://source.unsplash.com/1600x900/?school,education');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Quick Links */
+.quick-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.quick-link {
+    flex: 1;
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.quick-link:hover {
+    transform: scale(1.05);
+}
+
+.quick-link a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.quick-link a:hover {
+    background-color: var(--accent-color);
+}
+
+/* News Section */
+.news-section {
+    margin-top: 40px;
+}
+
+.news-item {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsivité pour les petits écrans */
+@media (max-width: 768px) {
+    .nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav ul li {
+        margin: 10px 0;
+    }
+
+    .quick-links {
+        flex-direction: column;
+    }
+
+    .quick-link {
+        margin: 10px 0;
+    }
+}
